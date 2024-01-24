@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="utf-8">
+		<title>Técnicas Para Criar Colunas</title>
+		<style>
+			.col1, .col2 {
+				height: 300px;
+			}
+
+			.col1 { width: 400px; outline: 1px solid #F00; }
+			.col2 { width: 200px; outline: 1px solid #00F; }
+
+			#Float div {
+				float: left;
+			}
+			.clear { clear: both; }
+			
+			#InlineBlock div {
+				display: inline-block;
+				vertical-align: top;
+				/* em muitas situações de uso do inline-block,
+				   é necessário fazer este vertical-align */
+			}
+			/* como em inline-block os espaços contam, tivemos que
+			   tirar o tamanho de um espaço de texto que é exactamente
+			   três pixeis */
+			#InlineBlock .col2 { margin-left: -3px; }
+			
+			
+			#Table { display: table; }
+
+			#Table .row { display: table-row; }
+
+			#Table .row div { display: table-cell; }
+
+            
+            #Flex { display: flex; }
+		</style>
+	</head>
+	<body>
+		<!--
+			A técnica mais antiga para criar colunas passava por aplicar float: left
+			Funcionava bem, desde que a pessoa se lembre de aplicar um clear: both
+			imediatamente no elemento a seguir.  Caso contrário, esses elementos a
+			seguir não ficavam no sitio certo.
+		-->
+		<div id="Float">
+			<div class="col1">float 1</div>
+			<div class="col2">float 2</div>
+		</div>
+		<div class="clear">float 3</div>
+		<!--
+		   A técnica #2 passa por criar um hibrido entre inline e block que herda
+		   de coisas de ambos, permitindo que um bloco fique ao lado de outro bloco.
+		   Esta técnica tem alguns contratempos como o espaço entre os blocos contar
+		   (3px) ou o alinhamento vertical causar problemas de vez em quando
+		-->
+		<div id="InlineBlock">
+			<div class="col1">ib 1</div>
+			<div class="col2">ib 2</div>
+		</div>
+		<div>ib 3</div>
+		<!--
+			A técnica #3 não dá chatices, ela simula exactamente como tabelas
+			trabalham e se há coisa que resulta bem para montar layouts são tabelas
+		-->
+		<div id="Table">
+			<div class="row">
+				<div class="col1">table 1</div>
+				<div class="col2">table 2</div>
+			</div>
+		</div>
+		<div>table 3</div>
+
+        <div id="Flex">
+            <div class="col1">flex 1</div>
+            <div class="col2">flex 2</div>
+        </div>
+        <div>flex 3</div>
+	</body>
+</html>
+
+
+
