@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercicio Transicao</title>
+        <style>
+            body > div {
+                margin-bottom: 30px;
+            }
+            #box1 {
+                width: 100px;
+                height: 100px;
+                background-color: #F00;
+                transition-duration: 4s;
+            }
+
+            #box1:hover {
+                background-color: #0F0;
+            }
+
+            #box2 {
+                width: 100px;
+                height: 100px;
+                background-color: #00F;
+                transition: all 2s;
+            }
+
+            #box2:hover {
+                background-color: #000;
+                width: 300px;
+                height: 300px;
+                transform: rotate(360deg);
+            }
+
+            #box3 {
+                height: 50px;
+                width: 50px;
+                border-radius: 6px;
+                background-color: orange;
+                transition-duration: 4s;
+            }
+
+            #box3:hover {
+                transform: rotate(360deg);
+                margin-left: 150px;
+                height: 80px;
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <div id="box4"></div>
+        <div id="box5"></div>
+        <div id="box6"></div>
+        <div id="box7"></div>
+    </body>
+</html>
