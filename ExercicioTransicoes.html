@@ -35,25 +35,52 @@
             #box3 {
                 height: 50px;
                 width: 50px;
-                max-width: 100%;
                 border-radius: 6px;
                 background-color: orange;
                 transition: 4s;
             }
 
-            #box3:hover {
+            #box3wrapper:hover #box3 {
                 transform: rotate(360deg);
                 margin-left: 300px;
                 height: 80px;
                 width: 80px;
             }
+
+            #box4 div {
+                width: 150px;
+                background-color: orange;
+                color: #FFF;
+                text-align: right;
+                border-radius: 6px;
+                margin-bottom: 5px;
+                padding: 5px;
+            }
+
+            #box4:hover div {
+                width: 700px;
+            }
+
+            #box4 .ease { transition: width 3s ease; }
+            #box4 .linear { transition: width 3s linear; }
+            #box4 .ease-in { transition: width 3s ease-in; }
+            #box4 .ease-out { transition: width 3s ease-out; }
+            #box4 .ease-in-out { transition: width 3s ease-in-out; }
         </style>
     </head>
     <body>
         <div id="box1"></div>
         <div id="box2"></div>
-        <div id="box3"></div>
-        <div id="box4"></div>
+        <div id="box3wrapper">
+            <div id="box3"></div>
+        </div>
+        <div id="box4">
+            <div class="ease">ease</div>
+            <div class="linear">linear</div>
+            <div class="ease-in">ease-in</div>
+            <div class="ease-out">ease-out</div>
+            <div class="ease-in-out">ease-in-out</div>
+        </div>
         <div id="box5"></div>
         <div id="box6"></div>
         <div id="box7"></div>

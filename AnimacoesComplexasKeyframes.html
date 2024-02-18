@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>AnimacoesComplexasKeyframes</title>
+        <style>
+            @keyframes Moving {
+                0% {
+                    margin-left: 0;
+                    margin-top: 0;
+                    background-color: red;
+                }
+
+                100% {
+                    margin-left: 600px;
+                    margin-top: 600px;
+                    background-color: green;
+                }
+            }
+
+            #square {
+                width: 300px;
+                height: 300px;
+                outline: 1px solid red;
+                animation-name: Moving;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="square"></div>
+    </body>
+</html>

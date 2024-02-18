@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>ExercicioKeyframes</title>
+        <style>
+            img {
+                width: 200px;
+                animation-name: MovingDog;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes MovingDog {
+                0% {
+                    margin-left: 0;
+                }
+
+                75% {
+                    transform: rotate(0);
+                    margin-left: 800px;
+                }
+
+                80% {
+                    transform: rotate(-40deg);
+                    margin-left: 800px;
+                }
+
+                85% {transform: rotate(0);
+                    margin-left: 800px;
+                }
+
+                100% {
+                    margin-left: 1100px;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="Cao">
+            <img src="images/Dog.svg" alt="">
+        </div>
+    </body>
+</html>
